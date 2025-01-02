@@ -1,5 +1,5 @@
 class Book < ApplicationRecord
-  validate :name, presence: true
-  validate :price, presence: true, numericality: true
-  
+  validates :name, presence: true
+  validates :price, presence: true
+
 end
