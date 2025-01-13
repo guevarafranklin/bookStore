@@ -1,3 +1,9 @@
 <section class="flex w-full flex-col items-center border">
         <h3 class="text-white font-bold text-lg">Books Sales Report </h3>
+
+        <% Book.all.each do |book| %>
+                <span class="text-white semi-bold mt-3"> <%= book.name %></span>
+                <%= render 'dashboard/charts/books/chart', book: book %>
+        <% end %>
+
 </section>

@@ -8,6 +8,17 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 book = Book.create(name: 'The Great Gatsby', price: 10.99)
-30.times do
+book2 = Book.create(name: 'The lord of the rings', price: 25.00)
+book3 = Book.create(name: 'Harry el sucio Potter', price: 12.99)
+
+10.times do
   book.sells << Sell.create(quantity: rand(2..10), day: Sell::DAYS[rand(0..(Sell::DAYS.length - 1))])
+end
+
+10.times do
+  book2.sells << Sell.create(quantity: rand(2..10), day: Sell::DAYS[rand(0..(Sell::DAYS.length - 1))])
+end
+
+10.times do
+  book3.sells << Sell.create(quantity: rand(2..10), day: Sell::DAYS[rand(0..(Sell::DAYS.length - 1))])
 end
