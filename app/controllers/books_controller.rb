@@ -7,7 +7,7 @@ class BooksController < ApplicationController
     @book = Book.new book_params
     if @book.save
       respond_to do |format|
-        format.turbo_stream 
+        format.turbo_stream
       end
     else
       render :new, status: :unprocessable_entity
@@ -18,5 +18,4 @@ private
   def book_params
     params.require(:book).permit(:name, :price)
   end
-
 end
