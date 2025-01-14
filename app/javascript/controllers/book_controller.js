@@ -6,6 +6,7 @@ export default class extends Controller {
     const divElement = this.element;
     const data = JSON.parse(divElement.getAttribute('data-book-sells'));
     const id = divElement.getAttribute('book-id');
+    let book_name = divElement.getAttribute('book-name');
     const barColors = ["red", "green","blue","orange","brown"];
     let xValues = [];
   
@@ -30,7 +31,8 @@ export default class extends Controller {
           display:false
         },
         title:{
-          display:false
+          display:true,
+          text: book_name
       },
     }
     });

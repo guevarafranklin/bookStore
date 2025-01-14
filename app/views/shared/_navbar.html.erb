@@ -6,7 +6,7 @@
 
     <div class="flex items-center justify-between">
         <%= turbo_frame_tag 'new_record_component', class: 'flex gap-2' do %>
-            <%= link_to '#', id: 'sell_link', class: 'text-white font-semibold text-sm text-center bg-green-700 text-white my-2' do %> 
+            <%= link_to new_sell_path, id: 'sell_link', class: 'text-white font-semibold text-sm text-center bg-green-700 text-white my-2' do %> 
                 Add Sell 
             <% end %>
         
