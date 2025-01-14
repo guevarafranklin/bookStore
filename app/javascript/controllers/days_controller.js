@@ -6,7 +6,7 @@ export default class extends Controller {
 
   const divElement = this.element;
   const data = JSON.parse(divElement.getAttribute('data-days-sells'));
-  const barColors = ["red", "green","blue","orange","brown"];
+  const barColors = ["red", "green","blue","purple","gray", "yellow", "white"];
   let days = [];
   let total = [];
 
